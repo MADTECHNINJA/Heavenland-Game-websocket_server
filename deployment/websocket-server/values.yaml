@@ -1,0 +1,43 @@
+app:
+    group: backend
+    service:
+        type: LoadBalancer
+image:
+  repository: us-central1-docker.pkg.dev/extreme-arch-347212
+  repo: websocket-server
+  name: websocket-server
+
+resources: {}
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
+environment: {}
+
+global:
+  replicaCount: 1
+  environment: {}
+
+replicaCount: 1
+minReplicas: 1
+maxReplicas: 10
+targetCPUup: 60
+
+secrets:
+  name: cloudsql-instance-credentials
+  volume:
+    name: cloudsql-instance-credentials
+  db:
+    name: ""
+
+ingress:
+    paths:
+        - /
+
+backendconfig:
+  name: websocket-server-backendconfig
+  timeoutSec: 120
+  drainingTimeoutSec: 60

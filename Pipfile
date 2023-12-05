@@ -1,0 +1,22 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "==4.0.4"
+channels = "==3.0.4"
+pyjwt = "==2.4.0"
+channels-redis = "==3.4.0"
+requests = "==2.27.1"
+djangorestframework = "==3.13.1"
+django-sslserver = "==0.22"
+redis = "==4.3.3"
+psycopg2 = "==2.9.3"
+daphne = "==3.0.2"
+google-cloud-storage = "==2.5.0"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"

@@ -1,0 +1,9 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+
+**/migrations
+src/media
+src/db.sqlite3
+Procfile
+.git
+docker-compose.yml
